@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f4b6c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.card h1 span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.buttons {
+  position: relative;
+  margin-top: 40px;
+  height: 80px; /* space for buttons */
+}
+
+/* YES button — fixed, neat position */
+#yes {
+  position: absolute;
+  left: 90px;
+  top: 0;
+  background: #e63946;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* NO wrapper — starts neatly on the right */
+.no-wrapper {
+  position: absolute;
+  left: 260px; /* initial neat spacing */
+  top: 0;
+  transition: all 0.15s ease;
+}
+
+/* NO button — NEVER clickable */
+#no {
+  pointer-events: none;
+  background: transparent;
+  border: 2px solid #555;
+  color: #333;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: default;
+}
